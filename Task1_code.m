@@ -29,7 +29,6 @@ plot(x,u1);
 end
 end
 
-fprintf("Done")
 plot(x,u1)
 
 plot(x,ux)
