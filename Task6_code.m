@@ -6,22 +6,16 @@ u0 = imnoise(u0,'salt & pepper',0.1);
 [m,n] = size(u0);
 u = u0;
 
-
-
-for i = 3:m-2
+for i = 3:m-1
     for j = 3:n-2
                
         mean = 0;
-        vr = 0;
         
         for x1 = -1:1:1
             for x2 = -1:1:1        
                 mean = mean+ u(i+x1,j+x2);
-                md(x1+2,x2+2) = u(i+x1,j+x2);
             end
         end
-        l = median(md);
-        mean = mean/9;
 
        for x1 = -1:1:1
             for x2 = -1:1:1
@@ -29,7 +23,7 @@ for i = 3:m-2
                 B = ((u(i+x1,j+x2) == 1)||(u(i+x1,j+x2) == 0));
                 
                 if (B)
-                    u(i+x1,j+x2) = (l(1,1)+mean)/2;
+                    u(i+x1,j+x2) = (mean - u(i+x1,j+x2))/8;
                 end
                 
             end
