@@ -12,7 +12,7 @@ u1 = u;
 for i = 2:m -1
     for j = 2:n -1
 
-        g(i,j) = task8_func(u(i,j));
+        g(i,j) = Task8_func(u(i,j));
 
     end
 end
