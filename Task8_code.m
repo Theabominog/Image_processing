@@ -11,13 +11,11 @@ u1 = u;
 
 for i = 2:m -1
     for j = 2:n -1
-
-        g(i,j) = Task8_func(u(i,j));
-        G(i,j) = g(i,j)/4;
+        G(i,j) = func(u(i,j));
     end
 end
 
-for t = 1:10;
+for t = 1:10
     for i = 2:m -2
         for j = 2:n -2
 
@@ -28,12 +26,13 @@ for t = 1:10;
     end
 end
 
+
 figure
-  subplot(1,4,2),
-    imshow(u0),title('Noised(S&P)');
-  subplot(1,4,4),
-    imshow(u),title('by PDE');
-  subplot(1,4,1),
-    imshow(abc),title('Actual Photo');
-  subplot(1,4,3),
-    imshow(medfilt3(u0)),title('Using medfilt3');
+subplot(1,4,1),
+imshow(abc),title('Actual Photo');
+subplot(1,4,2),
+imshow(u0),title('Noised(S&P)');
+subplot(1,4,3),
+imshow(u),title('using PDE');
+subplot(1,4,4),
+imshow(medfilt3(u0)),title('By using medfilt3');
