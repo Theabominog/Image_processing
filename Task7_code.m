@@ -13,13 +13,11 @@ u1 = u;
 
 for i = 2:m -1
     for j = 2:n -1
-
-        g(i,j) = Task8_func(u(i,j));
-        G(i,j) = g(i,j)/4;
+        G(i,j) = Task8_func(u(i,j));
     end
 end
 
-for t = 1:10;
+for t = 1:10
     for i = 2:m -2
         for j = 2:n -2
 
