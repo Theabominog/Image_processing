@@ -28,7 +28,7 @@ for t = 1:10
     end
 end
 
-lambda = 0.008;
+lambda = 0.01;
 
 for t = 1:30
 
