@@ -1,4 +1,4 @@
-function y = Task8_func2(u,time);
+function y = Task8_func2(u,time)
     
     [m,n] = size(u);
     

@@ -3,14 +3,14 @@ clear;
 u0 = imread('test2.png');
 abc = u0;
 u0 = im2double(u0);
-u0 = imnoise(u0,'gaussian',0.1);
-u0 = imnoise(u0,'salt & pepper',0.1);
+u0 = imnoise(u0,'speckle',0.1);
+%u0 = imnoise(u0,'salt & pepper',0.1);
 
-u = Task8_func2(u0,10);
-u = Task8_func3(u,0.01,30);
+%u = Task8_func2(u0,10);
+u = Task8_func3(u,0.01,50,0.2);
 
 u2 = medfilt3(u0);
-u2 = Task8_func3(u2,0.01,30);
+u2 = Task8_func3(u2,0.01,30,0.3);
 
 figure
 subplot(1,4,1),
