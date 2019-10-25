@@ -1,10 +1,17 @@
-function y = Task8_func3(u,lambda,time,k);
+function y = Task8_func3(u,lambda,time,k)
     
 [m,n] = size(u);
 u1 = u;
 
-for t = 1:time
+ux = zeros(m,n);
+uy = ux;
+g = zeros(m,n);
+Gx1 = g;
+Gx2 = g;
+Gy1 = g;
+Gy2 = g;
 
+for t = 1:time
     for i = 2:m -1
         for j = 2:n -1
     
@@ -25,7 +32,8 @@ for t = 1:time
     
         end
     end
-    
+
+
     for i = 2:m -2
         for j = 2:n -2
     

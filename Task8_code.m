@@ -1,23 +1,16 @@
 clear;
 
-u0 = imread('test2.png');
+u0 = imread('cameraman.tif');
 abc = u0;
 u0 = im2double(u0);
 u0 = imnoise(u0,'speckle',0.1);
-%u0 = imnoise(u0,'salt & pepper',0.1);
 
-%u = Task8_func2(u0,10);
-u = Task8_func3(u,0.01,50,0.2);
-
-u2 = medfilt3(u0);
-u2 = Task8_func3(u2,0.01,30,0.3);
+u = Task8_func3(u0,0.01,75,0.2);
 
 figure
-subplot(1,4,1),
-imshow(u0),title('Noised(S&P+Gaussian)');
-subplot(1,4,2),
-imshow(u),title('by S&P-PDE + G-PDE');
-subplot(1,4,3),
-imshow(u2),title('by medfilt3 + G-PDE');
-subplot(1,4,4),
-imshow(abc),title('Actual Photo');
+subplot(1,3,1),
+imshow(u0),title('Photo');
+subplot(1,3,2),
+imshow(u),title('Denoised');
+subplot(1,3,3),
+imshow(abc),title('Original');

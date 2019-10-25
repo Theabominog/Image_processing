@@ -1,6 +1,10 @@
-function y = grad_x_y(u);
+function y = grad_x_y(u)
 
 [m,n] = size(u);
+
+ux = zeros(m,n);
+uy = zeros(m,n);
+y = zeros(m,n);
 
 for i = 2:m -1
     for j = 2:n -1

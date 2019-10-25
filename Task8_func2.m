@@ -1,12 +1,13 @@
-function y = Task8_func2(u,time)
+function y = Task8_func2(u,time,max_pepper,min_salt)
     
     [m,n] = size(u);
     
     u1 = u;
+    G = u1;
 
     for i = 2:m -1
         for j = 2:n -1
-            G(i,j) = Task8_func(u(i,j));
+            G(i,j) = Task8_func(u(i,j),max_pepper,min_salt);
         end
     end
     
