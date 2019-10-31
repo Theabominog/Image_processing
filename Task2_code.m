@@ -19,7 +19,7 @@ for n = 1:k
     Z = u1;
     end
     clf
-    zlim =([ 0 1])
+    zlim =([0 1]);
     mesh(x,y,u1)
     pause(0.01)
 end
